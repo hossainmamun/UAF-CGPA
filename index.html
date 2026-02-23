@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UAF CGPA Calculator</title>
+    <!-- Main stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Optional PDF library for exporting results -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Application script -->
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="st-general-main-container">
+      <!-- Header Section -->
+      <div class="st-general-header">
+        <span class="st-general-title">UAF CGPA Calculator</span>
+        <p class="st-general-subtitle">
+          Calculate your GPA and CGPA using the official UAF 4‑point scale.
+        </p>
+      </div>
+      <!-- Form Section -->
+      <form id="uaf-calc-form" class="uaf-calc-form" autocomplete="off">
+        <!-- Semesters will be injected here by JavaScript -->
+        <div id="uaf-calc-semesters" class="uaf-calc-semesters"></div>
+      </form>
+
+      <div class="uaf-calc-actions">
+        <button
+          id="uaf-calc-add-semester"
+          class="st-general-btn st-print-btn uaf-calc-button"
+        >
+          <i class="fa-solid fa-plus"></i>
+          Add Semester
+        </button>
+        <button
+          type="button"
+          id="uaf-calc-calculate"
+          class="st-general-btn st-copy-btn uaf-calc-button"
+        >
+          <i class="fa-solid fa-calculator"></i>
+          Calculate
+        </button>
+      </div>
+
+      <section id="uaf-calc-result" class="uaf-calc-result" aria-live="polite">
+        <!-- Results will be rendered here by JavaScript -->
+      </section>
+      <!-- Action buttons appear after calculation -->
+      <div id="uaf-calc-actions" class="uaf-calc-actions" style="display: none">
+        <button
+          type="button"
+          id="uaf-calc-download"
+          class="st-general-btn st-pdf-btn uaf-calc-button"
+        >
+          <i class="fa-regular fa-file-pdf"></i>
+          PDF Results
+        </button>
+        <button
+          type="button"
+          id="uaf-calc-copy"
+          class="st-general-btn st-copy-btn uaf-calc-button"
+        >
+          <i class="fa-solid fa-copy"></i>
+          Copy Results
+        </button>
+        <button
+          type="button"
+          id="uaf-calc-reset"
+          class="st-general-btn st-main-reset-btn uaf-calc-button"
+        >
+          <i class="fa-solid fa-arrow-rotate-right"></i>
+          Reset
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
